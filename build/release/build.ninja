@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: CppHomework
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/User/cpphw/build/debug/
+cmake_ninja_workdir = C$:/Users/User/cpphw/build/release/
 
 #############################################
 # Utility command for test
 
 build CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\debug && C:\msys64\ucrt64\bin\ctest.exe "
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\release && C:\msys64\ucrt64\bin\ctest.exe "
   DESC = Running tests...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build test: phony CMakeFiles/test.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\debug && C:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\release && C:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -68,7 +68,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\debug && C:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SC:\Users\User\cpphw -BC:\Users\User\cpphw\build\debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\release && C:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SC:\Users\User\cpphw -BC:\Users\User\cpphw\build\release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -89,10 +89,10 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_hw1_main: phony || .
 
-build hw1/CMakeFiles/hw1_main.dir/main.cpp.obj: CXX_COMPILER__hw1_main_unscanned_Debug C$:/Users/User/cpphw/hw1/main.cpp || cmake_object_order_depends_target_hw1_main
-  CONFIG = Debug
+build hw1/CMakeFiles/hw1_main.dir/main.cpp.obj: CXX_COMPILER__hw1_main_unscanned_Release C$:/Users/User/cpphw/hw1/main.cpp || cmake_object_order_depends_target_hw1_main
+  CONFIG = Release
   DEP_FILE = hw1\CMakeFiles\hw1_main.dir\main.cpp.obj.d
-  FLAGS = -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/User/cpphw/hw1
   OBJECT_DIR = hw1\CMakeFiles\hw1_main.dir
   OBJECT_FILE_DIR = hw1\CMakeFiles\hw1_main.dir
@@ -106,8 +106,9 @@ build hw1/CMakeFiles/hw1_main.dir/main.cpp.obj: CXX_COMPILER__hw1_main_unscanned
 #############################################
 # Link the executable hw1\hw1_main.exe
 
-build hw1/hw1_main.exe: CXX_EXECUTABLE_LINKER__hw1_main_Debug hw1/CMakeFiles/hw1_main.dir/main.cpp.obj
-  CONFIG = Debug
+build hw1/hw1_main.exe: CXX_EXECUTABLE_LINKER__hw1_main_Release hw1/CMakeFiles/hw1_main.dir/main.cpp.obj
+  CONFIG = Release
+  FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = hw1\CMakeFiles\hw1_main.dir
   POST_BUILD = cd .
@@ -126,10 +127,10 @@ build hw1/hw1_main.exe: CXX_EXECUTABLE_LINKER__hw1_main_Debug hw1/CMakeFiles/hw1
 
 build cmake_object_order_depends_target_hw1_tests: phony || .
 
-build hw1/CMakeFiles/hw1_tests.dir/tests/test_sort.cpp.obj: CXX_COMPILER__hw1_tests_unscanned_Debug C$:/Users/User/cpphw/hw1/tests/test_sort.cpp || cmake_object_order_depends_target_hw1_tests
-  CONFIG = Debug
+build hw1/CMakeFiles/hw1_tests.dir/tests/test_sort.cpp.obj: CXX_COMPILER__hw1_tests_unscanned_Release C$:/Users/User/cpphw/hw1/tests/test_sort.cpp || cmake_object_order_depends_target_hw1_tests
+  CONFIG = Release
   DEP_FILE = hw1\CMakeFiles\hw1_tests.dir\tests\test_sort.cpp.obj.d
-  FLAGS = -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/User/cpphw/hw1
   OBJECT_DIR = hw1\CMakeFiles\hw1_tests.dir
   OBJECT_FILE_DIR = hw1\CMakeFiles\hw1_tests.dir\tests
@@ -143,8 +144,9 @@ build hw1/CMakeFiles/hw1_tests.dir/tests/test_sort.cpp.obj: CXX_COMPILER__hw1_te
 #############################################
 # Link the executable hw1\hw1_tests.exe
 
-build hw1/hw1_tests.exe: CXX_EXECUTABLE_LINKER__hw1_tests_Debug hw1/CMakeFiles/hw1_tests.dir/tests/test_sort.cpp.obj
-  CONFIG = Debug
+build hw1/hw1_tests.exe: CXX_EXECUTABLE_LINKER__hw1_tests_Release hw1/CMakeFiles/hw1_tests.dir/tests/test_sort.cpp.obj
+  CONFIG = Release
+  FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = hw1\CMakeFiles\hw1_tests.dir
   POST_BUILD = cd .
@@ -163,10 +165,10 @@ build hw1/hw1_tests.exe: CXX_EXECUTABLE_LINKER__hw1_tests_Debug hw1/CMakeFiles/h
 
 build cmake_object_order_depends_target_hw1_bench: phony || .
 
-build hw1/CMakeFiles/hw1_bench.dir/bench/benchmark.cpp.obj: CXX_COMPILER__hw1_bench_unscanned_Debug C$:/Users/User/cpphw/hw1/bench/benchmark.cpp || cmake_object_order_depends_target_hw1_bench
-  CONFIG = Debug
+build hw1/CMakeFiles/hw1_bench.dir/bench/benchmark.cpp.obj: CXX_COMPILER__hw1_bench_unscanned_Release C$:/Users/User/cpphw/hw1/bench/benchmark.cpp || cmake_object_order_depends_target_hw1_bench
+  CONFIG = Release
   DEP_FILE = hw1\CMakeFiles\hw1_bench.dir\bench\benchmark.cpp.obj.d
-  FLAGS = -std=gnu++17
+  FLAGS = -O3 -DNDEBUG -std=gnu++17
   INCLUDES = -IC:/Users/User/cpphw/hw1
   OBJECT_DIR = hw1\CMakeFiles\hw1_bench.dir
   OBJECT_FILE_DIR = hw1\CMakeFiles\hw1_bench.dir\bench
@@ -180,8 +182,9 @@ build hw1/CMakeFiles/hw1_bench.dir/bench/benchmark.cpp.obj: CXX_COMPILER__hw1_be
 #############################################
 # Link the executable hw1\hw1_bench.exe
 
-build hw1/hw1_bench.exe: CXX_EXECUTABLE_LINKER__hw1_bench_Debug hw1/CMakeFiles/hw1_bench.dir/bench/benchmark.cpp.obj
-  CONFIG = Debug
+build hw1/hw1_bench.exe: CXX_EXECUTABLE_LINKER__hw1_bench_Release hw1/CMakeFiles/hw1_bench.dir/bench/benchmark.cpp.obj
+  CONFIG = Release
+  FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = hw1\CMakeFiles\hw1_bench.dir
   POST_BUILD = cd .
@@ -196,7 +199,7 @@ build hw1/hw1_bench.exe: CXX_EXECUTABLE_LINKER__hw1_bench_Debug hw1/CMakeFiles/h
 # Utility command for test
 
 build hw1/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\debug\hw1 && C:\msys64\ucrt64\bin\ctest.exe "
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\release\hw1 && C:\msys64\ucrt64\bin\ctest.exe "
   DESC = Running tests...
   pool = console
   restat = 1
@@ -208,7 +211,7 @@ build hw1/test: phony hw1/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build hw1/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\debug\hw1 && C:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\release\hw1 && C:\msys64\ucrt64\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -219,7 +222,7 @@ build hw1/edit_cache: phony hw1/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build hw1/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\debug\hw1 && C:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SC:\Users\User\cpphw -BC:\Users\User\cpphw\build\debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\User\cpphw\build\release\hw1 && C:\msys64\ucrt64\bin\cmake.exe --regenerate-during-build -SC:\Users\User\cpphw -BC:\Users\User\cpphw\build\release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -247,14 +250,14 @@ build hw1_tests.exe: phony hw1/hw1_tests.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/User/cpphw/build/debug
+# Folder: C:/Users/User/cpphw/build/release
 
 build all: phony hw1/all
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/User/cpphw/build/debug/hw1
+# Folder: C:/Users/User/cpphw/build/release/hw1
 
 build hw1/all: phony hw1/hw1_main.exe hw1/hw1_tests.exe hw1/hw1_bench.exe
 
@@ -265,7 +268,7 @@ build hw1/all: phony hw1/hw1_main.exe hw1/hw1_tests.exe hw1/hw1_bench.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/User/cpphw/build/debug/cmake_install.cmake C$:/Users/User/cpphw/build/debug/hw1/cmake_install.cmake C$:/Users/User/cpphw/build/debug/CTestTestfile.cmake C$:/Users/User/cpphw/build/debug/hw1/CTestTestfile.cmake: RERUN_CMAKE | C$:/Users/User/cpphw/CMakeLists.txt C$:/Users/User/cpphw/hw1/CMakeLists.txt C$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.4.4/CMakeCXXCompiler.cmake CMakeFiles/4.4.4/CMakeRCCompiler.cmake CMakeFiles/4.4.4/CMakeSystem.cmake
+build build.ninja C$:/Users/User/cpphw/build/release/cmake_install.cmake C$:/Users/User/cpphw/build/release/hw1/cmake_install.cmake C$:/Users/User/cpphw/build/release/CTestTestfile.cmake C$:/Users/User/cpphw/build/release/hw1/CTestTestfile.cmake: RERUN_CMAKE | C$:/Users/User/cpphw/CMakeLists.txt C$:/Users/User/cpphw/hw1/CMakeLists.txt C$:/msys64/ucrt64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Linker/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/ucrt64/share/cmake/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/4.4.4/CMakeCXXCompiler.cmake CMakeFiles/4.4.4/CMakeRCCompiler.cmake CMakeFiles/4.4.4/CMakeSystem.cmake
   pool = console
 
 

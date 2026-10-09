@@ -13,12 +13,26 @@
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/c++.exe"
       }
+    },
+    {
+      "name": "release",
+      "inherits": "debug",
+      "displayName": "Release (MSYS2 UCRT64)",
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
     }
   ],
   "buildPresets": [
     {
       "name": "debug",
       "configurePreset": "debug"
+    },
+    {
+      "name": "release",
+      "configurePreset": "release",
+      "targets": ["hw1_bench"]
     }
   ]
 }

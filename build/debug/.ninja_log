@@ -1,12 +1,14 @@
 # ninja log v7
-6	695	8132543882050477	hw1/CMakeFiles/hw1_tests.dir/tests/test_sort.cpp.obj	cfb492ca02189c17
-7	366	8131933664380292	hw1/CMakeFiles/hw1_bench.dir/bench/benchmark.cpp.obj	b18f22049b97a98d
-7	861	8132443272530542	hw1/CMakeFiles/hw1_main.dir/main.cpp.obj	292afffefa9d5d11
-10	3306	8131934235597623	hw1/hw1_bench.exe	979c447774e40eba
-696	1929	8132543888940803	hw1/hw1_tests.exe	225689f16f69c197
-862	2877	8132443281072902	hw1/hw1_main.exe	a09a90d7c7056bc9
-1	152	8132548241280750	build.ninja	af2a177ebb443afb
-1	152	8132548241094066	C:/Users/User/cpphw/build/debug/cmake_install.cmake	af2a177ebb443afb
-1	152	8132548241181614	C:/Users/User/cpphw/build/debug/hw1/cmake_install.cmake	af2a177ebb443afb
 5	644	8132548245610345	hw1/CMakeFiles/hw1_tests.dir/tests/test_sort.cpp.obj	cfb492ca02189c17
+4	753	8132556977284225	hw1/CMakeFiles/hw1_bench.dir/bench/benchmark.cpp.obj	b18f22049b97a98d
+5	376	8132562085163146	hw1/CMakeFiles/hw1_main.dir/main.cpp.obj	e17f91bb32c597a6
+757	1863	8132556984802071	hw1/hw1_bench.exe	979c447774e40eba
 645	1753	8132548252013285	hw1/hw1_tests.exe	225689f16f69c197
+862	2877	8132443281072902	hw1/hw1_main.exe	a09a90d7c7056bc9
+1	152	8132562505435253	build.ninja	af2a177ebb443afb
+1	152	8132562505273756	C:/Users/User/cpphw/build/debug/cmake_install.cmake	af2a177ebb443afb
+1	152	8132562505347434	C:/Users/User/cpphw/build/debug/hw1/cmake_install.cmake	af2a177ebb443afb
+8	318	8132562509948232	hw1/hw1_tests.exe	b6856c5c3baad4a6
+11	324	8132562509964827	hw1/hw1_bench.exe	b86eb7a9a0f74068
+5	392	8132562509913170	hw1/CMakeFiles/hw1_main.dir/main.cpp.obj	292afffefa9d5d11
+393	542	8132562513788410	hw1/hw1_main.exe	e8ca6fa983f39f53

@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/User/cpphw/build/release/cmake_install.cmake",
+		"C:/Users/User/cpphw/build/release/hw1/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
