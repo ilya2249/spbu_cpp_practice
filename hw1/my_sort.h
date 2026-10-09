@@ -1,13 +1,15 @@
 #pragma once
 #include <vector>
+#include <functional>
+#include <iterator>
 using namespace std;
-
-inline vector<int> merge(const vector<int>&left, const vector<int>&right){
-    vector<int>result;
+template <typename T, typename Compare>
+vector<T> merge(const vector<T>&left, const vector<T>&right, Compare comp){
+    vector<T>result;
     size_t i = 0;
     size_t j = 0;  
     while(i < left.size() && j < right.size()){
-        if (left[i] <= right[j]){
+        if (comp(left[i], right[j])){
             result.push_back(left[i]);
             i++;
         }
@@ -26,20 +28,32 @@ inline vector<int> merge(const vector<int>&left, const vector<int>&right){
     }
     return result;
 }
-inline vector<int>merge_sort(const vector<int>&arr){
+template <typename T, typename Compare = std::less<T>>
+vector<T>merge_sort(const vector<T>&arr, Compare comp = Compare{}){
     if (arr.size()<=1) {
         return arr;
     }
     size_t mid = arr.size()/2;
-    vector<int>left;
+    vector<T>left;
     for (size_t i = 0; i< mid; i++){
         left.push_back(arr[i]);
     }
-    vector<int>right;
+    vector<T>right;
     for (size_t i = mid; i< arr.size(); i++){
         right.push_back(arr[i]);
     }
-    return merge(merge_sort(left), merge_sort(right));
     
+    return merge(merge_sort(left, comp),merge_sort(right, comp),comp);
 
+}
+template <typename It, typename Compare = less<typename iterator_traits<It>::value_type>>
+void mySort(It first, It last, Compare comp = Compare{}){
+    using T = typename std::iterator_traits<It>::value_type;
+    vector<T>arr(first, last);
+    vector<T>result = merge_sort(arr, comp);
+    auto it = first;
+    for (const auto& elem : result) {
+        *it = elem; 
+        ++it;
+    }
 }
