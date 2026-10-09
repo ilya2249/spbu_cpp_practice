@@ -1,0 +1,1 @@
+[<img width="2500" height="2500" alt="изображение" src="https://github.com/user-attachments/assets/1d736fa7-9f7a-4f39-841d-a695853d8fea" />](https://preview.redd.it/what-do-you-do-while-compiling-your-code-v0-21bmu1q256d21.png?auto=webp&s=08d6754ea0da23ae6bb8f2d06002272bac409446)
