@@ -1,0 +1,19 @@
+Start testing: Oct 09 15:41 Russia TZ 2 Standard Time
+----------------------------------------------------------
+1/1 Testing: hw1_tests
+1/1 Test: hw1_tests
+Command: "C:/Users/User/cpphw/build/debug/hw1/hw1_tests.exe"
+Directory: C:/Users/User/cpphw/build/debug/hw1
+"hw1_tests" start time: Oct 09 15:41 Russia TZ 2 Standard Time
+Output:
+----------------------------------------------------------
+All tests passed!
+<end of output>
+Test time =   0.37 sec
+----------------------------------------------------------
+Test Passed.
+"hw1_tests" end time: Oct 09 15:41 Russia TZ 2 Standard Time
+"hw1_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 09 15:41 Russia TZ 2 Standard Time

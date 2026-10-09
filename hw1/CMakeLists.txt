@@ -1,6 +1,7 @@
 add_executable(hw1_main main.cpp)
 
 add_executable(hw1_tests tests/test_sort.cpp)
+add_test(NAME hw1_tests COMMAND hw1_tests)
 
 add_executable(hw1_bench bench/benchmark.cpp)
 
