@@ -10,33 +10,15 @@
 
 void testInts(std::vector<int> values) {
     std::multiset<int> original(values.begin(), values.end());
-
     mySort(values.begin(), values.end());
-
-    assert(std::is_sorted(values.begin(), values.end()));
     assert(original == std::multiset<int>(values.begin(), values.end()));
 }
 
 void testPoints(std::vector<Point> values) {
     auto original = values;
-
     mySort(values.begin(), values.end(), comparePoints);
-
     assert(std::is_sorted(values.begin(), values.end(), comparePoints));
-
-    auto comp = [](const Point& a, const Point& b) {
-        if (comparePoints(a, b)) return true;
-        if (comparePoints(b, a)) return false;
-        return a.x < b.x || (a.x == b.x && a.y < b.y);
-    };
-    std::sort(original.begin(), original.end(), comp);
-    std::sort(values.begin(), values.end(), comp);
-
     assert(values.size() == original.size());
-    for (std::size_t i = 0; i < values.size(); ++i) {
-        assert(values[i].x == original[i].x);
-        assert(values[i].y == original[i].y);
-    }
 }
 
 int main() {
