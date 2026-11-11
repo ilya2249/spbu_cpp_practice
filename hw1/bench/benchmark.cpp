@@ -38,7 +38,6 @@ void benchmark(const std::vector<T>& data, Compare comp) {
         finish = std::chrono::steady_clock::now();
         stdTime += std::chrono::duration<double, std::milli>(finish - start).count();
 
-        // Check the result outside the timed section, including in Release.
         if (!std::is_sorted(myData.begin(), myData.end(), comp) ||
             !std::is_sorted(stdData.begin(), stdData.end(), comp)) {
             std::cerr << "Sorting failed!\n";
