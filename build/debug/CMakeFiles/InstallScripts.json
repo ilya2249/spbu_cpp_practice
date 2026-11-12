@@ -2,7 +2,8 @@
 	"InstallScripts" : 
 	[
 		"C:/Users/User/cpphw/build/debug/cmake_install.cmake",
-		"C:/Users/User/cpphw/build/debug/hw1/cmake_install.cmake"
+		"C:/Users/User/cpphw/build/debug/hw1/cmake_install.cmake",
+		"C:/Users/User/cpphw/build/debug/hw2/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

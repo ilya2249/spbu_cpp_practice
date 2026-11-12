@@ -1,0 +1,8 @@
+Configuration: Release; compiler: GNU 16.2.0; optimization: -O2
+Average of 3 runs; times in milliseconds.
+Speedup = naive / optimized; seed = 12345; tolerance = 1e-9.
+    Size      Naive (ms)    Optimized (ms)       Speedup          Checksum
+     100           1.887             1.268         1.488         -2082.865
+     200          16.100            10.348         1.556        -10059.625
+     500         252.314           164.034         1.538         23538.694
+    1000        2362.246          1322.777         1.786        -73968.760

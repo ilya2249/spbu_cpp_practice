@@ -1,0 +1,19 @@
+Start testing: Nov 12 20:01 Russia TZ 2 Standard Time
+----------------------------------------------------------
+2/2 Testing: hw2_tests
+2/2 Test: hw2_tests
+Command: "C:/Users/User/cpphw/build/release/hw2/hw2_tests.exe"
+Directory: C:/Users/User/cpphw/build/release/hw2
+"hw2_tests" start time: Nov 12 20:01 Russia TZ 2 Standard Time
+Output:
+----------------------------------------------------------
+All matrix tests passed (absolute tolerance 1e-9).
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"hw2_tests" end time: Nov 12 20:01 Russia TZ 2 Standard Time
+"hw2_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 12 20:01 Russia TZ 2 Standard Time

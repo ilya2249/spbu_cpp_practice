@@ -5,6 +5,9 @@
 1384	1628	8132584762137794	hw1/hw1_bench.exe	b86eb7a9a0f74068
 8	318	8132562509948232	hw1/hw1_tests.exe	b6856c5c3baad4a6
 532	772	8133333835260276	hw1/hw1_main.exe	e8ca6fa983f39f53
-1	152	8133337979299107	build.ninja	af2a177ebb443afb
-1	152	8133337979086043	C:/Users/User/cpphw/build/debug/cmake_install.cmake	af2a177ebb443afb
-1	152	8133337979175699	C:/Users/User/cpphw/build/debug/hw1/cmake_install.cmake	af2a177ebb443afb
+1	152	8162060637437378	build.ninja	af2a177ebb443afb
+1	152	8162060637007674	C:/Users/User/cpphw/build/debug/cmake_install.cmake	af2a177ebb443afb
+1	152	8162060637246846	C:/Users/User/cpphw/build/debug/hw1/cmake_install.cmake	af2a177ebb443afb
+8	88	8162060642127387	hw2/CMakeFiles/hw2_main.dir/main.cpp.obj	777a2caff6a655b0
+13	1103	8162060642167053	hw2/CMakeFiles/hw2_bench.dir/bench/benchmark.cpp.obj	a29b822bdea5c3ce
+11	1106	8162060642147601	hw2/CMakeFiles/hw2_tests.dir/tests/test_matrix.cpp.obj	a15dc09318fd003

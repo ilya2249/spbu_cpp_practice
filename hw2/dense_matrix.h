@@ -2,7 +2,7 @@
 #include <stdexcept>
 #include "matrix.h"
 #include <vector>
-
+#include <memory>
 class DenseMatrix: public Matrix {
     private:
         std::size_t rows_;
@@ -28,6 +28,56 @@ class DenseMatrix: public Matrix {
             }
             return data_[i*cols_+j];
         }
+        
+        DenseMatrix multiplyNaive(const DenseMatrix &other) const {
+        
+            if (cols_ != other.rows()){
+                throw std::invalid_argument("Invalid matrix: cols_A != rows_B ");
+
+            }
+           
+            DenseMatrix C(rows_, other.cols());
+            for (size_t i = 0; i < rows_; i++){
+
+                for (size_t j = 0; j<other.cols(); j++) {
+                
+                        for (size_t k = 0; k<cols_;k++){
+                        C.at(i,j) +=  data_[i*cols_+k] * other.at(k,j);
+                }
+            
+                }          
+
+            }
+            return C;
+
+
+        };
+        DenseMatrix OptimizedMultiply(const DenseMatrix &other) const {
+            if (cols_ != other.rows()) throw std::invalid_argument("Invalid matrix: cols_A != rows_B ");
+            DenseMatrix C(rows_,other.cols());
+            for (size_t i = 0; i < rows_; i++){
+                for (size_t k = 0; k<cols_;k++){
+                    for (size_t j = 0; j<other.cols(); j++) {
+                        C.at(i,j) +=  data_[i*cols_+k] * other.at(k,j);
+                }
+            
+                }          
+
+            }
+            return C;
+
+        }
+        std::unique_ptr<Matrix> mul(
+            const Matrix&other
+        ) const override {
+            const auto *dense = dynamic_cast<const DenseMatrix*> (&other);
+            if (dense == nullptr) throw std::invalid_argument("Unsupported matrix type");
+            auto ptr = std::make_unique<DenseMatrix>(OptimizedMultiply(*dense));
+            return ptr;
+
+        }
+
+
     };
     
     

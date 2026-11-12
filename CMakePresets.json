@@ -32,7 +32,7 @@
     {
       "name": "release",
       "configurePreset": "release",
-      "targets": ["hw1_bench"]
+      "targets": ["hw1_bench", "hw2_tests", "hw2_bench"]
     }
   ]
 }
